@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, input, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -23,7 +23,7 @@ export class SinglefruitComponent {
   @Output()fruitname = new EventEmitter<string>();
 
   sendInputData(){
-    // this.fruitname.emit(this.fruit.name);
-    console.log(this.inputData);
+    this.fruitname.emit(this.inputData);
+    this.inputData = "";
   }
 }
